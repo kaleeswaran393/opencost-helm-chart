@@ -117,7 +117,7 @@ rbac:
 opencost:
   # -- <SECRET_NAME> for the secret containing the Cloud Costs cloud-integration.json https://www.opencost.io/docs/configuration/#cloud-costs
   # -- kubectl create secret generic <SECRET_NAME> --from-file=cloud-integration.json -n opencost
-  cloudIntegrationSecret: ""
+  cloudIntegrationSecret: "cloud-costs"
   exporter:
     # API_PORT for the cost-model to listen on
     apiPort: 9003
@@ -256,7 +256,7 @@ opencost:
 
   cloudCost:
     # -- Enable cloud cost ingestion and querying, dependant on valid integration credentials
-    enabled: false
+    enabled: true
     # -- Number of hours between each run of the Cloud Cost pipeline
     refreshRateHours: 6
     # -- Number of days into the past that a Cloud Cost standard run will query for
